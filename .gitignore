@@ -1,0 +1,23 @@
+# Visual Studio / C# .gitignore
+# Ignore bin and obj folders
+[Bb]in/
+[Oo]bj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+[Oo]ut/
+
+# Optional: Ignore the assets folder from Git to prevent huge repository size
+# If you want to include assets, you should use Git LFS or compress them
+# assets/
