@@ -101,11 +101,44 @@ namespace KingdomBlind_CSharp.Systems
             };
         }
 
-        private static readonly KingdomBlind_CSharp.Data.LocalDialogueService localDialogueService = new KingdomBlind_CSharp.Data.LocalDialogueService();
-
         private static string GetStaticLine(string role, string ruler, string context)
         {
-            return localDialogueService.GetLine(role, context, ruler);
+            if (context.Contains("حرب") || context.Contains("war") || context.Contains("جيش"))
+            {
+                if (role.Contains("جواسيس") || role.Contains("استخ"))
+                    return $"مولاي {ruler}، الحرب تبدأ قبل السيوف؛ أمهلني عيوناً على الطريق حتى لا نضرب ظلاً ونترك الخطر الحقيقي.";
+                if (role.Contains("عسكري") || role.Contains("قائد"))
+                    return $"مولاي {ruler}، إن أردت الحرب فلتسبقها المؤونة والحشد وحامية ثابتة في الظهر، وإلا صار النصر باباً لفوضى أطول.";
+                if (role.Contains("دبلو"))
+                    return $"مولاي {ruler}، قبل إعلان الحرب لنختبر باب الوعيد والضمانات؛ أحياناً تخاف الدولة إذا سمعت السيف قبل أن تراه.";
+                if (role.Contains("دين") || role.Contains("قاض"))
+                    return $"مولاي {ruler}، لا يثبت السيف بلا حجة عادلة؛ امنح الرعية سبباً يفهمونه قبل أن تطلب أبناءهم للجبهة.";
+                if (role.Contains("زوج") || role.Contains("ملكة"))
+                    return $"يا {ruler}، الحرب تدخل القصر كما تدخل الحدود؛ إن طال الغياب تنازع الورثة والنساء على الخبر قبل القرار.";
+                if (role.Contains("دولة") || role.Contains("حاكم"))
+                    return $"يا {ruler}، لا أسمع طبولك كوزير في مجلسك بل كحاكم على حدوده؛ إن أردت السلام فاجعل منفعة بقائي أوضح من خوف الحرب.";
+                return $"مولاي {ruler}، ميزان القوة لا تحسمه الشجاعة وحدها؛ راقب المؤونة والولاء قبل طبول الحرب.";
+            }
+
+            if (context.Contains("مال") || context.Contains("خزان") || context.Contains("tax"))
+            {
+                if (role.Contains("جواسيس") || role.Contains("استخ"))
+                    return $"مولاي {ruler}، إذا ضاقت الخزينة اتسعت الرشاوى؛ راقب عمال الجباية قبل أن يصير نقص المال باب خيانة.";
+                if (role.Contains("عسكري") || role.Contains("قائد"))
+                    return $"مولاي {ruler}، الجيش يأكل قبل أن يقاتل؛ أصلح الدخل لكن لا تقطع أرزاق الجند دفعة واحدة.";
+                if (role.Contains("دبلو"))
+                    return $"مولاي {ruler}، التجارة مع جار آمن أرخص من غنيمة عابرة؛ افتح سوقاً يحفظ وجه الدولة ولا يرهق الرعية.";
+                if (role.Contains("تجار"))
+                    return $"مولاي {ruler}، أمّن الطرق وخفف خوف القوافل، وستأتيك الخزينة من السوق قبل أن تطلبها بالسوط.";
+                if (role.Contains("زوج") || role.Contains("ملكة"))
+                    return $"يا {ruler}، المال إذا قسا على الناس عاد همساً في القصر؛ ابدأ بما يزيد الدخل ولا يهين البيوت.";
+                return $"مولاي {ruler}، المال الهادئ أطول عمراً من الجباية القاسية؛ راقب رضا المقاطعات قبل رفع الضرائب.";
+            }
+
+            if (role.Contains("زوج") || role.Contains("ملكة"))
+                return $"يا {ruler}، القصر لا يقل خطراً عن الحدود؛ الكلمة في البلاط قد تسبق السيف.";
+
+            return $"مولاي {ruler}، القرار الحكيم يبدأ بسؤال: من سيكسب من هذا، ومن سيتذكره ضدنا؟";
         }
 
         private bool CanTryOnline()
