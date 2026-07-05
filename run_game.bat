@@ -1,7 +1,7 @@
 @echo off
 echo ===========================================
-echo تشغيل Kingdom Blind - النسخة المحدثة (C#)
+echo تشغيل Whispers of the Throne
 echo ===========================================
-cd "%~dp0KingdomBlind_CSharp"
+cd "%~dp0WhispersOfTheThrone"
 dotnet run
 pause

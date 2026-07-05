@@ -1,0 +1,130 @@
+{
+  "SpeechProvider": "nvda",
+  "UseSuperTonic": false,
+  "SuperTonicSpeed": 1,
+  "SapiReadsEvents": true,
+  "SapiReadsNPCs": false,
+  "SapiVoiceName": "",
+  "AiProvider": {
+    "ProviderType": 7,
+    "Endpoint": "https://api.groq.com/openai/v1",
+    "Model": "openai/gpt-oss-120b",
+    "ApiKeyEnvironmentVariable": "GROQ_API_KEY",
+    "AllowOnlineRequests": true,
+    "TimeoutSeconds": 20,
+    "CharacterModelOverrides": {},
+    "PerProviderConfigs": {
+      "Gemini": {
+        "ApiKeyEnvironmentVariable": "GOOGLE_API_KEY",
+        "ApiKey": "",
+        "Endpoint": "https://generativelanguage.googleapis.com/v1beta",
+        "Model": "",
+        "AllowOnlineRequests": false,
+        "TimeoutSeconds": 20,
+        "CustomModels": [],
+        "RemovedModels": [],
+        "DisplayAlias": ""
+      },
+      "Mistral": {
+        "ApiKeyEnvironmentVariable": "MISTRAL_API_KEY",
+        "ApiKey": "",
+        "Endpoint": "https://api.mistral.ai/v1",
+        "Model": "mistral-large-latest",
+        "AllowOnlineRequests": true,
+        "TimeoutSeconds": 20,
+        "CustomModels": [],
+        "RemovedModels": [],
+        "DisplayAlias": ""
+      },
+      "OpenCode": {
+        "ApiKeyEnvironmentVariable": "OPENCODE_API_KEY",
+        "ApiKey": "",
+        "Endpoint": "https://opencode.ai/zen/go/v1",
+        "Model": "mimo-v2.5",
+        "AllowOnlineRequests": true,
+        "TimeoutSeconds": 20,
+        "CustomModels": [],
+        "RemovedModels": [],
+        "DisplayAlias": ""
+      },
+      "OpenRouter": {
+        "ApiKeyEnvironmentVariable": "OPENROUTER_API_KEY",
+        "ApiKey": "",
+        "Endpoint": "https://openrouter.ai/api/v1",
+        "Model": "",
+        "AllowOnlineRequests": false,
+        "TimeoutSeconds": 20,
+        "CustomModels": [],
+        "RemovedModels": [],
+        "DisplayAlias": ""
+      },
+      "Groq": {
+        "ApiKeyEnvironmentVariable": "GROQ_API_KEY",
+        "ApiKey": "",
+        "Endpoint": "https://api.groq.com/openai/v1",
+        "Model": "",
+        "AllowOnlineRequests": false,
+        "TimeoutSeconds": 20,
+        "CustomModels": [],
+        "RemovedModels": [],
+        "DisplayAlias": ""
+      },
+      "Grok": {
+        "ApiKeyEnvironmentVariable": "",
+        "ApiKey": "",
+        "Endpoint": "https://api.x.ai/v1",
+        "Model": "",
+        "AllowOnlineRequests": false,
+        "TimeoutSeconds": 20,
+        "CustomModels": [],
+        "RemovedModels": [],
+        "DisplayAlias": ""
+      }
+    },
+    "HiddenProviders": []
+  },
+  "AiActors": {
+    "SmartDialoguesEnabled": true,
+    "DialogueLengthLevel": 1,
+    "AllowAutonomousActions": true,
+    "MaxAutonomousMonthlyBudget": 200,
+    "UseSuperTonicForAiDialogue": false,
+    "ApplyToSpouses": true,
+    "ApplyToMinisters": true,
+    "ApplyToHeirs": true,
+    "ApplyToGovernors": true,
+    "ApplyToFactions": true,
+    "ApplyToNeighborRulers": true,
+    "ApplyToEnemies": true,
+    "ApplyToOtherCharacters": true,
+    "AllowAiMinisterDecisions": true,
+    "AllowAiSpouseDecisions": true,
+    "AllowAiNeighborDecisions": true,
+    "AllowAiGovernorDecisions": true,
+    "AllowAiFactionDecisions": true,
+    "AllowAiNeighborRealmManagement": true,
+    "OpenRouterFreeOnly": true,
+    "DefaultModel": "openai/gpt-oss-120b",
+    "RoleModelOverrides": {},
+    "CharacterProviderAssignments": [
+      {
+        "CharacterId": "292ea81e-a6d8-4dff-8443-ddf70c5fd055",
+        "CharacterName": "\u0627\u0644\u0623\u0645\u064a\u0631 \u0639\u0645\u0631",
+        "ProviderType": 5,
+        "Model": "mistral-small-latest"
+      },
+      {
+        "CharacterId": "e7dab4e3-5bbd-4b37-9995-f8ba812a7ca7",
+        "CharacterName": "\u0627\u0644\u0648\u0627\u0644\u064a \u0632\u064a\u062f",
+        "ProviderType": 5,
+        "Model": "mistral-large-latest"
+      },
+      {
+        "CharacterId": "9e669c8a-d000-4227-a701-13dee5ea9933",
+        "CharacterName": "\u0627\u0644\u0623\u0645\u064a\u0631 \u0639\u0645\u0631",
+        "ProviderType": 7,
+        "Model": "llama-3.3-70b-versatile"
+      }
+    ]
+  }
+}

@@ -18,6 +18,10 @@ build/
 bld/
 [Oo]ut/
 
-# Optional: Ignore the assets folder from Git to prevent huge repository size
-# If you want to include assets, you should use Git LFS or compress them
-# assets/
+# Decompiler and agent scratch files
+DecompilerTool/
+ilspycmd/
+ilspycmd_dir/
+scratch/
+restored_Story_ar.json
+Whispers of the Throne/
